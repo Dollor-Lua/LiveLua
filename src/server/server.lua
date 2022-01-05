@@ -26,10 +26,11 @@ function server:start(callback)
 
     while self._running do
         local client, errmsg = serve:accept()
+        local main = handler.new(callback, self.location)
 
         if client then
             client:settimeout(self.timeout, 'b')
-            handler:onRequest(self.port, client, serve)
+            main:onRequest(self.port, client, serve)
         else
             io.stderr("ERROR: Failed to accept a client: " .. errmsg .. '\n')
         end
