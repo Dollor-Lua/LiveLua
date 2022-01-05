@@ -7,7 +7,8 @@ files["app/helpers/.keep"] = ""
 files["logs/.keep"] = ""
 
 files["app/scripts/pages_controller.lua"] = ""
-files["app/views/pages/home.html.el"] = ""
+files["app/views/pages/home.html.el"] =
+    '<!DOCTYPE html>\n<html lang="en">\n\t<head>\n\t\t<meta charset="UTF-8">\n\t\t<meta http-equiv="X-UA-Compatible" content="IE=edge">\n\t\t<meta name="viewport" content="width=device-width, initial-scale=1.0">\n\t\t<title>Live Lua!</title>\n\t\t<style>\n\t\t\t* {\n\t\t\t\tmargin: 0;\n\t\t\t\tfont-family: Arial, Helvetica, sans-serif;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<div style="width:100%;height:100%;background-color:#000;position:absolute;margin:0;">\n\t\t\t<h1 style="position:absolute;width:fit-content;left:50%;transform:translateX(-50%);color:#fff;top:7.5%;">\n\t\t\t\tWoo! You\'ve got Live Lua up and running!\n\t\t\t</h1>\n\t\t\t<img src="https://github.com/Dollor-Lua/LuaS/blob/main/LuaSLogo.png?raw=true" style="top:45%;height:50%;width:fit-content;position:absolute;left:50%;transform:translate(-50%, -50%);">\n\t\t\t<h1 style="color:#fff;top:85%;left:50%;transform:translate(-50%, -100%);position:absolute;">Get started by editting views/pages/home.el.html\n\t\t\t\t</h1>\n\t\t</div>\n\t</body>\n</html>'
 
 files["config/locales/I18n.lua"] = ""
 files["config/locales/en-US.lua"] = ""
