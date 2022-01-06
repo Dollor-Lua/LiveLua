@@ -53,7 +53,7 @@ elseif arg[1] == "init" then
 
     local files = require("src.fileconfig")
     local processes = {{"Creating Folders", function(prog)
-        local dirs = {"app/assets/", "app/helpers/", "app/scripts/", "app/views/pages/", "config/locales/",
+        local dirs = {"app/assets/", "app/helpers/", "app/scripts/", "app/views/pages/", "config/locales/languages",
                       "config/etc/", "public/", "logs/", "bin/", "whirl_modules/webpacker/"}
 
         local cache = {}
@@ -102,7 +102,9 @@ elseif arg[1] == "init" then
                 prog = 90 - (100 / (len / 3) * 4)
             end
             gauge:setProgress(prog)
-            socket.sleep(0.01);
+            if i % 3 == 0 then
+                socket.sleep(0.01);
+            end
         end
 
         local file = io.open(path.join(etc.cacheCwd, contents[1]), "w+")
@@ -118,4 +120,5 @@ elseif arg[1] == "init" then
     quickGauge("Cleaning Up")
 
     print("\nLua Webpacker is successfully installed! 🍰")
+    print("Successfully built new project in folder './'")
 end
